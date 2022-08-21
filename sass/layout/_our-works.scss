@@ -1,0 +1,34 @@
+.our-works {
+    padding-top: 0;
+}
+
+.our-works-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-works-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: calc((100% - 60px) / 3);
+    position: relative;
+}
+
+
+.our-works-list__text {
+    width: 100%;
+    height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
