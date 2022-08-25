@@ -1,14 +1,15 @@
 .client-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.client-list__item:not(:last-child) {
-  margin-right: 30px;
+.client-list__item {
+  flex-basis: calc((100% - 30px) / 2);
 }
 
 .client-list__link {
   @extend %align;
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -32,3 +33,16 @@
     fill: var(--accent-color);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .client-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-list__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
+

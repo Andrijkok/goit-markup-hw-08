@@ -1,22 +1,28 @@
-.our-works {
-    padding-top: 0;
+@media screen and (max-width: 1199px) {
+  .our-works {
+    display: none;
+  }
 }
 
-.our-works-list {
+@media screen and (min-width: 1200px) {
+  .our-works {
+    padding-top: 0;
+  }
+
+  .our-works-list {
     display: flex;
     justify-content: space-between;
-}
+  }
 
-.our-works-list__item {
+  .our-works-list__item {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     flex-basis: calc((100% - 60px) / 3);
     position: relative;
-}
+  }
 
-
-.our-works-list__text {
+  .our-works-list__text {
     width: 100%;
     height: 70px;
     padding-top: 27px;
@@ -31,4 +37,5 @@
     position: absolute;
     left: 0;
     bottom: 0;
+  }
 }

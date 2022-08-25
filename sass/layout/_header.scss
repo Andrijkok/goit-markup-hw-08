@@ -1,95 +1,159 @@
-.page-header-flex,
-.menu-nav,
-.site-nav,
-.contacts-link {
+@media screen and (max-width: 767px) {
+  .site-nav,
+  .contacts-link {
+    display: none;
+  }
+
+  .mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+}
+
+.page-header {
+  padding-top: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #ececec;
-}
-
 .logo {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
-  color: #2196f3;
-}
-
-.page-header__logo {
-  margin-right: 90px;
+  font-size: 24px;
+  line-height: 1.1666;
+  color: var(--accent-color);
+  letter-spacing: 0.03em;
 }
 
 .logo__part-two_theme_black {
-  color: #000000;
-}
-
-.site-nav__link {
-  padding-top: 33px;
-  padding-bottom: 33px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--primary-text-color-them-dark);
+}
 
-  position: relative;
+@media screen and (min-width: 768px) {
+  .mobile-menu-open {
+    display: none;
+  }
 
-  transition: color var(--transition-dur-and-funk);
+  .page-header {
+    padding-top: 20px;
+    padding-bottom: 19px;
+  }
 
-  &:hover,
-  &:focus {
+  .menu-nav,
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    margin-right: 88px;
+  }
+
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .contacts-link__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .site-nav__link {
+    padding-top: 25px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-them-dark);
+
+    position: relative;
+  }
+
+  .site-nav__link_current {
     color: var(--accent-color);
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .contacts-link__link {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1666;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-them-gray);
+  }
+
+  .contacts-link__icon {
+    margin-right: 10px;
+    fill: currentColor;
   }
 }
 
-.contacts-link__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.contacts-link__link {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color-them-gray);
-
-  transition: color var(--transition-dur-and-funk);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.1923;
   }
-}
 
-.contacts-link__icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 
-.site-nav__link_current {
-  color: var(--accent-color);
-  position: relative;
+  .page-header__logo {
+    margin-right: 92px;
+  }
 
-  &::after {
-    content: '';
-    display: block;
-    border-radius: 2px;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
+  .contacts-link {
+    display: flex;
+  }
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  .contacts-link__item:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  .contacts-link__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .site-nav__link {
+    transition: color var(--transition-dur-and-funk);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .contacts-link__link {
+    font-size: 14px;
+    line-height: 1.1428;
+    transition: color var(--transition-dur-and-funk);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
 }
