@@ -58,6 +58,7 @@
 
 .modal-form__check-desc {
   @extend %align;
+  flex-wrap: wrap;
   font-size: 12px;
   line-height: 1.666;
   color: var(--primary-text-color-them-gray);
